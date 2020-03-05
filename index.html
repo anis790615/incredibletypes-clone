@@ -49,39 +49,39 @@
           <div class="menu-nav">
             <h3 class="menu-title">Tags</h3>
             <ul class="tags-nav">
-              <li><a href="#" class="filtertag application client">Advertising</a></li>
-              <li><a href="#" class="filtertag application">Alcohol packaging</a></li>
-              <li><a href="#" class="filtertag application">Annual report</a></li>
-              <li><a href="#" class="filtertag application">Apparel</a></li>
-              <li><a href="#" class="filtertag style">Black & white</a></li>
-              <li><a href="#" class="filtertag resource">Blogs</a></li>
-              <li><a href="#" class="filtertag application">Book cover</a></li>
-              <li><a href="#" class="filtertag application">Brand logo</a></li>
-              <li><a href="#" class="filtertag application">Brochure</a></li>
-              <li><a href="#" class="filtertag application">Corporate logo</a></li>
-              <li><a href="#" class="filtertag client ">Corporations</a></li>
-              <li><a href="#" class="filtertag client">Design</a></li>
-              <li><a href="#" class="filtertag application">Desktop application</a></li>
-              <li><a href="#" class="filtertag application">Digital media </a></li>
-              <li><a href="#" class="filtertag application">E-book</a></li>
-              <li><a href="#" class="filtertag application">Editorial illustration</a></li>
-              <li><a href="#" class="filtertag client">Education</a></li>
-              <li><a href="#" class="filtertag client">Energy</a></li>
-              <li><a href="#" class="filtertag client">Entertainment</a></li>
-              <li><a href="#" class="filtertag resource">Events</a></li>
-              <li><a href="#" class="filtertag client">Fashion</a></li>
-              <li><a href="#" class="filtertag client">Festival</a></li>
-              <li><a href="#" class="filtertag client">Film</a></li>
-              <li><a href="#" class="filtertag resource">Fonts</a></li>
-              <li><a href="#" class="filtertag style">Fun</a></li>
-              <li><a href="#" class="filtertag client">Government</a></li>
-              <li><a href="#" class="filtertag style">Grid layout</a></li>
-              <li><a href="#" class="filtertag client">Hospitality</a></li>
-              <li><a href="#" class="filtertag application">Identity</a></li>
-              <li><a href="#" class="filtertag application">Illustration</a></li>
-              <li><a href="#" class="filtertag application style">International style</a></li>
-              <li><a href="#" class="filtertag resource">Interviews</a></li>
-              <li><a href="#" class="filtertag application resource">Magazines</a></li>
+              <li><a href="#" class="all application client">Advertising</a></li>
+              <li><a href="#" class="all application">Alcohol packaging</a></li>
+              <li><a href="#" class="all application">Annual report</a></li>
+              <li><a href="#" class="all application">Apparel</a></li>
+              <li><a href="#" class="all style">Black & white</a></li>
+              <li><a href="#" class="all resource">Blogs</a></li>
+              <li><a href="#" class="all application">Book cover</a></li>
+              <li><a href="#" class="all application">Brand logo</a></li>
+              <li><a href="#" class="all application">Brochure</a></li>
+              <li><a href="#" class="all application">Corporate logo</a></li>
+              <li><a href="#" class="all client ">Corporations</a></li>
+              <li><a href="#" class="all client">Design</a></li>
+              <li><a href="#" class="all application">Desktop application</a></li>
+              <li><a href="#" class="all application">Digital media </a></li>
+              <li><a href="#" class="all application">E-book</a></li>
+              <li><a href="#" class="all application">Editorial illustration</a></li>
+              <li><a href="#" class="all client">Education</a></li>
+              <li><a href="#" class="all client">Energy</a></li>
+              <li><a href="#" class="all client">Entertainment</a></li>
+              <li><a href="#" class="all resource">Events</a></li>
+              <li><a href="#" class="all client">Fashion</a></li>
+              <li><a href="#" class="all client">Festival</a></li>
+              <li><a href="#" class="all client">Film</a></li>
+              <li><a href="#" class="all resource">Fonts</a></li>
+              <li><a href="#" class="all style">Fun</a></li>
+              <li><a href="#" class="all client">Government</a></li>
+              <li><a href="#" class="all style">Grid layout</a></li>
+              <li><a href="#" class="all client">Hospitality</a></li>
+              <li><a href="#" class="all application">Identity</a></li>
+              <li><a href="#" class="all application">Illustration</a></li>
+              <li><a href="#" class="all application style">International style</a></li>
+              <li><a href="#" class="all resource">Interviews</a></li>
+              <li><a href="#" class="all application resource">Magazines</a></li>
   
             </ul>
           </div>
@@ -128,6 +128,7 @@
     
   </div>
   <script>
+    // show/hide menu
     function toggle() {
       const colapMenu = document.querySelector('.menu');
       const menuLink  = document.querySelector('.toggle-links');
@@ -136,11 +137,26 @@
       if(colapMenu.classList.contains('hide-menu')) {
         colapMenu.classList.replace('hide-menu', 'show-menu');
         menuLink.textContent = menuLink.textContent.replace("Show Menu", "Hide Menu");
-        console.log(menuLink);
+        
       } else {
         colapMenu.classList.replace('show-menu', 'hide-menu');
         menuLink.textContent = menuLink.textContent.replace("Hide Menu", "Show Menu");
       }
+    }
+    // Filter Menu
+    function filterSelection(tag) {
+      const allTags = document.querySelectorAll(".all");
+      
+        for (let i=0; i<allTags.length; i++ ) {
+          allTags[i].classList.add('disabled');
+          if (allTags[i].className.indexOf(tag) > -1) {
+            allTags[i].classList.remove('disabled'); 
+          }
+        }
+
+      
+     
+    
     }
   </script>
 </body>
