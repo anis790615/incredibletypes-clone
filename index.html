@@ -11,67 +11,96 @@
   <div class="container">
     <header>
       <nav>
-        <div class="top-nav"></div>
+        <div class="top-nav">
           <div class="logo">
-          <h1>Incredible Types</h1>
+            <h1>Incredible Types</h1>
+          </div>
+          <div>
+            <a id="toggle" href="#" class="toggle-links" onclick="toggle()">Show Menu</a>
+          </div>
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
 
-        <div class="menu">
-          <ul class="main-nav menu-nav">
-            <li class="menu-title"><h3>Menu</h3></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Tag Index</a></li>
-            <li><a href="#">RSS</a></li>
-          </ul>
-          <ul class="filter-nav menu-nav">
-            <li class="menu-title"><h3>Filter Tags</h3></li>
-            <li><a href="#" class="filter active" onclick="filterSelection('all')">View All</a></li>
-            <li><a href="#" class="filter" onclick="filterSelection('application')">Application</a></li>
-            <li><a href="#" class="filter" onclick="filterSelection('client')">Client</a></li>
-            <li><a href="#" class="filter" onclick="filterSelection('style')">Style</a></li>
-            <li><a href="#" class="filter" onclick="filterSelection('resource')">Resource</a></li>
-          </ul>
-          <ul class="tags-nav menu-nav">
-            <li class="menu-title"><h3>Tags</h3></li>
-            <li><a href="#" class="filtertag application client">Advertising</a></li>
-            <li><a href="#" class="filtertag application">Alcohol packaging</a></li>
-            <li><a href="#" class="filtertag application">Annual report</a></li>
-            <li><a href="#" class="filtertag application">Apparel</a></li>
-            <li><a href="#" class="filtertag style">Black & white</a></li>
-            <li><a href="#" class="filtertag resource">Blogs</a></li>
-            <li><a href="#" class="filtertag application">Book cover</a></li>
-            <li><a href="#" class="filtertag application">Brand logo</a></li>
-            <li><a href="#" class="filtertag application">Brochure</a></li>
-            <li><a href="#" class="filtertag application">Corporate logo</a></li>
-            <li><a href="#" class="filtertag client ">Corporations</a></li>
-            <li><a href="#" class="filtertag client">Design</a></li>
-            <li><a href="#" class="filtertag application">Desktop application</a></li>
-            <li><a href="#" class="filtertag application">Digital media </a></li>
-            <li><a href="#" class="filtertag application">E-book</a></li>
-            <li><a href="#" class="filtertag application">Editorial illustration</a></li>
-            <li><a href="#" class="filtertag client">Education</a></li>
-            <li><a href="#" class="filtertag client">Energy</a></li>
-            <li><a href="#" class="filtertag client">Entertainment</a></li>
-            <li><a href="#" class="filtertag resource">Events</a></li>
-            <li><a href="#" class="filtertag client">Fashion</a></li>
-            <li><a href="#" class="filtertag client">Festival</a></li>
-            <li><a href="#" class="filtertag client">Film</a></li>
-            <li><a href="#" class="filtertag resource">Fonts</a></li>
-            <li><a href="#" class="filtertag style">Fun</a></li>
-            <li><a href="#" class="filtertag client">Government</a></li>
-            <li><a href="#" class="filtertag style">Grid layout</a></li>
-            <li><a href="#" class="filtertag client">Hospitality</a></li>
-            <li><a href="#" class="filtertag application">Identity</a></li>
-            <li><a href="#" class="filtertag application">Illustration</a></li>
-            <li><a href="#" class="filtertag application style">International style</a></li>
-            <li><a href="#" class="filtertag resource">Interviews</a></li>
-            <li><a href="#" class="filtertag application resource">Magazines</a></li>
 
-          </ul>
+        </div>
+        <div id="menu" class="menu hide-menu">
+          <div class="menu-nav">
+            <h3 class="menu-title">Menu</h3>
+            <ul class="main-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Tag Index</a></li>
+              <li><a href="#">RSS</a></li>
+            </ul>
+          </div>
+          <div class="menu-nav">
+            <h3 class="menu-title">Filter Tags</h3>
+            <ul class="filter-nav">
+              <li><a href="#" class="filter active" onclick="filterSelection('all')">View All</a></li>
+              <li><a href="#" class="filter" onclick="filterSelection('application')">Application</a></li>
+              <li><a href="#" class="filter" onclick="filterSelection('client')">Client</a></li>
+              <li><a href="#" class="filter" onclick="filterSelection('style')">Style</a></li>
+              <li><a href="#" class="filter" onclick="filterSelection('resource')">Resource</a></li>
+            </ul>
+          </div>
+          <div class="menu-nav">
+            <h3 class="menu-title">Tags</h3>
+            <ul class="tags-nav">
+              <li><a href="#" class="filtertag application client">Advertising</a></li>
+              <li><a href="#" class="filtertag application">Alcohol packaging</a></li>
+              <li><a href="#" class="filtertag application">Annual report</a></li>
+              <li><a href="#" class="filtertag application">Apparel</a></li>
+              <li><a href="#" class="filtertag style">Black & white</a></li>
+              <li><a href="#" class="filtertag resource">Blogs</a></li>
+              <li><a href="#" class="filtertag application">Book cover</a></li>
+              <li><a href="#" class="filtertag application">Brand logo</a></li>
+              <li><a href="#" class="filtertag application">Brochure</a></li>
+              <li><a href="#" class="filtertag application">Corporate logo</a></li>
+              <li><a href="#" class="filtertag client ">Corporations</a></li>
+              <li><a href="#" class="filtertag client">Design</a></li>
+              <li><a href="#" class="filtertag application">Desktop application</a></li>
+              <li><a href="#" class="filtertag application">Digital media </a></li>
+              <li><a href="#" class="filtertag application">E-book</a></li>
+              <li><a href="#" class="filtertag application">Editorial illustration</a></li>
+              <li><a href="#" class="filtertag client">Education</a></li>
+              <li><a href="#" class="filtertag client">Energy</a></li>
+              <li><a href="#" class="filtertag client">Entertainment</a></li>
+              <li><a href="#" class="filtertag resource">Events</a></li>
+              <li><a href="#" class="filtertag client">Fashion</a></li>
+              <li><a href="#" class="filtertag client">Festival</a></li>
+              <li><a href="#" class="filtertag client">Film</a></li>
+              <li><a href="#" class="filtertag resource">Fonts</a></li>
+              <li><a href="#" class="filtertag style">Fun</a></li>
+              <li><a href="#" class="filtertag client">Government</a></li>
+              <li><a href="#" class="filtertag style">Grid layout</a></li>
+              <li><a href="#" class="filtertag client">Hospitality</a></li>
+              <li><a href="#" class="filtertag application">Identity</a></li>
+              <li><a href="#" class="filtertag application">Illustration</a></li>
+              <li><a href="#" class="filtertag application style">International style</a></li>
+              <li><a href="#" class="filtertag resource">Interviews</a></li>
+              <li><a href="#" class="filtertag application resource">Magazines</a></li>
+  
+            </ul>
+          </div>
         </div>
 
+
+
+        
       </nav>
+      <div class="showcase">
+        <h3 class="menu-title">Showcase</h3>
+        <p class="showcase-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quo. Ad quia, beatae laudantium libero labore nobis molestiae numquam placeat.</p>
+      </div>
+        
+        
+        
+        
+
+
 
     </header>
     <!-- <section class="articles">
@@ -98,5 +127,21 @@
     </footer>
     
   </div>
+  <script>
+    function toggle() {
+      const colapMenu = document.querySelector('.menu');
+      const menuLink  = document.querySelector('.toggle-links');
+      
+      
+      if(colapMenu.classList.contains('hide-menu')) {
+        colapMenu.classList.replace('hide-menu', 'show-menu');
+        menuLink.textContent = menuLink.textContent.replace("Show Menu", "Hide Menu");
+        console.log(menuLink);
+      } else {
+        colapMenu.classList.replace('show-menu', 'hide-menu');
+        menuLink.textContent = menuLink.textContent.replace("Hide Menu", "Show Menu");
+      }
+    }
+  </script>
 </body>
 </html>
