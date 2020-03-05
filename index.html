@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Incredible Types - Clone</title>
 </head>
@@ -19,15 +20,13 @@
             <a id="toggle" href="#" class="toggle-links" onclick="toggle()">Show Menu</a>
           </div>
           <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <a href="#" onclick="toggle()"><i class="material-icons">menu</i></a>
           </div>
 
 
         </div>
         <div id="menu" class="menu hide-menu">
-          <div class="menu-nav">
+          <div class="menu-nav main-menu">
             <h3 class="menu-title">Menu</h3>
             <ul class="main-nav">
               <li><a href="#">Home</a></li>
@@ -36,7 +35,7 @@
               <li><a href="#">RSS</a></li>
             </ul>
           </div>
-          <div class="menu-nav">
+          <div class="menu-nav filter-menu">
             <h3 class="menu-title">Filter Tags</h3>
             <ul class="filter-nav">
               <li><a href="#" class="filter active" onclick="filterSelection('all')">View All</a></li>
@@ -46,7 +45,7 @@
               <li><a href="#" class="filter" onclick="filterSelection('resource')">Resource</a></li>
             </ul>
           </div>
-          <div class="menu-nav">
+          <div class="menu-nav tag-menu">
             <h3 class="menu-title">Tags</h3>
             <ul class="tags-nav">
               <li><a href="#" class="all application client">Advertising</a></li>
@@ -92,8 +91,17 @@
         
       </nav>
       <div class="showcase">
-        <h3 class="menu-title">Showcase</h3>
-        <p class="showcase-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quo. Ad quia, beatae laudantium libero labore nobis molestiae numquam placeat.</p>
+        <div class="menu-title">
+          <h3>Showcase</h3>
+        </div>
+        <div class="showcase-content">
+          <p>
+            Incredible Types is a curated collection and showcase of outstanding typography and design from around the world. We currently have 426 pieces of inspirational design in our showcase, from 432 creatives and studios from 51 different countries.</p>
+            <br>
+            <p>Follow us on <a href="#">Twitter</a>, <a href="#">Facebook</a> and <a href="#">Pinterest</a>or subscribe to our <a href="#"> RSS Feed</a></p>
+          </div>
+
+
       </div>
         
         

@@ -49,6 +49,17 @@ nav {
   align-self: center; */
   flex-basis: calc(100%/3);
 }
+.top-nav .hamburger-menu {
+text-align: right;
+display: none;
+}
+.top-nav .hamburger-menu a:hover {
+  border: none;
+  }
+
+.top-nav .hamburger-menu i {
+  font-size: 2rem;
+}
 
 
 
@@ -107,11 +118,11 @@ a.disabled:hover {
   align-items: flex-start;
   
 }
-.showcase > h3 {
+.showcase .menu-title {
   
   width: calc(100%/3);
 }
-.showcase > p {
+.showcase .showcase-content {
   width: calc(100% - (100%/3));
 }
 
@@ -134,4 +145,49 @@ width: 33%;
 
 .card-image img  {
   width: 100%;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .container {
+    background: transparent;
+  }
+  .toggle-links {
+    display: none;
+  }
+  .top-nav .hamburger-menu {
+    
+    display: block;
+    }
+    #menu .filter-menu,
+    #menu .tag-menu {
+      display: none;
+    } 
+    #menu .main-menu {
+      width: 100%;
+    }
+    #menu .main-menu .menu-title {
+      display: none;
+    }
+    #menu .main-menu .main-nav li:first-child {
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+    #menu .main-menu .main-nav li:nth-child(n+2) {
+      border-bottom: 1px solid #ccc;
+
+    }
+    .showcase {
+      flex-direction: column;
+    }
+    .showcase .menu-title,
+    .showcase .showcase-content {
+      width: 100%;
+    }
+      
+
 }
