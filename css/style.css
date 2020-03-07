@@ -14,7 +14,7 @@ body {
    color: black;
  } 
  a:hover {
-   border-bottom: 1px solid black;
+   text-decoration: underline;
  }
 
  ul {
@@ -24,9 +24,10 @@ body {
 
   
 .container {
-  /* width: 100%; */
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
   min-height: 100vh;
+  /* height: 4000px; */
   
   margin: auto;
   background: linear-gradient(90deg, #f0f0f0 1px, transparent 2px) -1px 0, transparent;
@@ -65,7 +66,7 @@ display: none;
 
 .menu {
   display: flex;
-  /* overflow: hidden; */
+  overflow: hidden;
   margin-top: 1rem;
   margin-bottom: 3rem;
   
@@ -107,7 +108,7 @@ display: none;
   color: #ccc;
 }
 a.disabled:hover {
-  border:none;
+  text-decoration: none;
 }
 
 .showcase {
@@ -116,6 +117,7 @@ a.disabled:hover {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-bottom: 4rem;
   
 }
 .showcase .menu-title {
@@ -130,27 +132,89 @@ a.disabled:hover {
 
 
 
-section.articles {
+.articles {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-article.card {
-padding: 5px;
-width: 33%;
-}
-.card-title {
-  display: none;
+.articles  .card {
+padding: 10px;
+width: calc(100% / 3);
+position: relative;
+overflow: hidden;
 }
 
-.card-image img  {
+.card-image .image-wrap {
+  position: relative;
+  
   width: 100%;
 }
+.card-image .image-wrap .photo  {
+  width: 100%;
+  filter: grayscale(1);
+  transition: filter 0s;
+  
+}
+  
+.card-image .image-wrap::after {
+  content: "";
+  overflow: hidden;
+  position: absolute;
+  top:0;
+  left: 0;
+  background: rgba(250, 250, 250, 0.9);
+  visibility: hidden;
+  width: 100%;
+  height: 30%;
+  transition: visibility 0s;
+  
+}
+.card-title {
+  padding: inherit;
+  position: absolute; 
+  top: 3%;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0s;
+  
+}
+
+.card-title .title-link,
+.card-title .source-link {
+ font-size: 0.8rem;
+ display: block;
+ 
+}
+.card-title .source-link {
+  color: #444;
+}
+
+.card:hover .photo {
+  filter: none;
+  transition: filter 0.2s ease-in;
+}
+.card:hover .card-title {
+  opacity: 1;
+  transition: opacity 0.4s 0.4s ease-in-out;
+  
+}
+.card:hover .image-wrap::after {
+  visibility: visible;
+  transition: visibility 0.4s 0.4s ease-in-out;
+  
+}
+
+  
 
 
 
 
 
+
+
+/* Media queries Tablets */
 
 @media (max-width: 768px) {
   .container {
