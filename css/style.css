@@ -24,7 +24,7 @@ body {
 
   
 .container {
-  width: 100%;
+  
   max-width: 1400px;
   min-height: 100vh;
   /* height: 4000px; */
@@ -133,14 +133,19 @@ a.disabled:hover {
 
 
 .articles {
+  /* width: 100%; */
+  overflow: hidden;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  /* min-height: 1000px; */
+  max-height: 2800px;
+  align-content: flex-start;
 }
 
 .articles  .card {
-padding: 10px;
+padding: 5px 10px;
 width: calc(100% / 3);
 position: relative;
 overflow: hidden;
@@ -164,15 +169,15 @@ overflow: hidden;
   position: absolute;
   top:0;
   left: 0;
-  background: rgba(250, 250, 250, 0.9);
-  visibility: hidden;
+  background: rgba(245, 245, 245, 0.8);
+  opacity: 0;
   width: 100%;
-  height: 30%;
-  transition: visibility 0s;
+  height: 7vw;
+  transition: opacity 0s;
   
 }
 .card-title {
-  padding: inherit;
+  padding: 5px ;
   position: absolute; 
   top: 3%;
   z-index: 2;
@@ -183,8 +188,9 @@ overflow: hidden;
 
 .card-title .title-link,
 .card-title .source-link {
- font-size: 0.8rem;
+ font-size: 0.7rem;
  display: block;
+ padding-left: 5px;
  
 }
 .card-title .source-link {
@@ -197,12 +203,12 @@ overflow: hidden;
 }
 .card:hover .card-title {
   opacity: 1;
-  transition: opacity 0.4s 0.4s ease-in-out;
+  transition: opacity 0.3s 0.3s ease-in;
   
 }
 .card:hover .image-wrap::after {
-  visibility: visible;
-  transition: visibility 0.4s 0.4s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.3s 0.3s ease-in;
   
 }
 
@@ -252,6 +258,12 @@ overflow: hidden;
     .showcase .showcase-content {
       width: 100%;
     }
+    .articles {
+      max-height: 3300px;
+    }
+    .articles  .card { 
+      width: calc(100% / 2);
+      }
       
 
 }
