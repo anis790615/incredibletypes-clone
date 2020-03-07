@@ -220,6 +220,7 @@ overflow: hidden;
   /* padding-left: 15px; */
   width: calc((100%/6)*4);
   margin-bottom: 1rem;
+  font-size: 0.7rem;
   
 
 }
@@ -231,7 +232,7 @@ overflow: hidden;
   display: flex;
   flex-flow: column wrap;
   overflow: hidden;
-  height: 23vh;
+  height: 130px;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
@@ -244,7 +245,7 @@ overflow: hidden;
 
 }
 .latest-posts li .latest-links {
-  font-size: 0.9rem;
+  
   text-overflow: ellipsis;
   display: inline-block;
   width: 95%;
@@ -313,6 +314,31 @@ overflow: hidden;
     }
     .articles  .card { 
       width: calc(100% / 2);
+      }
+      .links {
+        margin-left: 0;
+        width: 100%;
+      }
+      .latest-posts {
+        flex-wrap: nowrap;
+        height: 120px;
+      }
+      .latest-posts li {
+        width: 100%;
+        padding-left: 1rem;;
+      }
+      .links h3 {
+        margin: 0;
+        padding-left: 1rem;
+        border-top: 1px solid #ccc;
+
+      }
+      .latest-posts li:first-child {
+        border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      }
+      .latest-posts li:nth-child(n+2) {
+        border-bottom: 1px solid #ccc;
       }
       
 
