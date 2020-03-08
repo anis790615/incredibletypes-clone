@@ -3,4 +3,4 @@ A clone of the main page of the website http://incredibletypes.com/, which was a
 The clone can be seen at the link below:
 https://anis790615.github.io/incredibletypes-clone/
 
-(A work in progress) - Currently finsihed the navigation only.
+(A work in progress) - Currently finished all parts except the footer.
