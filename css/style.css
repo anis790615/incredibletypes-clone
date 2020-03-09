@@ -7,6 +7,7 @@
 body {
   background: #ffffff;
   font-family: 'Raleway', sans-serif;
+  /* font-family: "Helvetica Narrow", sans-serif; */
   line-height: 1.8;
 }
  a {
@@ -66,8 +67,9 @@ display: none;
 .menu {
   display: flex;
   overflow: hidden;
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
+  font-size: 0.8rem
   
 }
 .hide-menu {
@@ -93,7 +95,7 @@ display: none;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
-  max-height: 40;
+  max-height: 400px;
  
 }
 .tags-nav li {
@@ -104,7 +106,7 @@ display: none;
 
 
 .disabled {
-  color: #ccc;
+  color: #888888;
 }
 a.disabled:hover {
   text-decoration: none;
@@ -139,7 +141,7 @@ a.disabled:hover {
   justify-content: flex-start;
   align-items: flex-start;
   /* min-height: 1000px; */
-  max-height: 2800px;
+  max-height: 2400px;
   align-content: flex-start;
   margin-bottom: 3rem;
 }
@@ -254,23 +256,48 @@ overflow: hidden;
 
 }
 
-
+/* Footer */
+footer {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
   
+}
+  .footer-flex {
+    margin-left: calc(100%/3) ;
+    display: flex;
+    width: calc((100%/6)*4);
+  }
+  .footer-flex >div {
+    width: 25%;
+    line-height: 1.4;
+    padding: 1rem 2rem;
+    font-size: 0.6rem;
+    color: #888888;
+    text-align: left;
+  }
+  .footer-flex >div h4 {
+    padding-bottom: 0.5rem;;
+  }
+  .footer-links {
+    color: #888888;
+    
+  }
+
 
 
 
 /* Scaling width of the wrapped element so that less empty space occurs, when there is more content that should not be necessary */
-@media(min-width: 1001px) and (max-width:1276px){
+/* @media(min-width: 1001px) and (max-width:1276px){
   .articles {
-    max-height: 2500px;
+    max-height: 2100px;
   }
 }
 
 @media(min-width: 769px) and (max-width:1000px){
   .articles {
-    max-height: 2000px;
+    max-height: 1800px;
   }
-}
+} */
 /* Media queries Tablets */
 
 @media (max-width: 768px) {
@@ -321,24 +348,37 @@ overflow: hidden;
       }
       .latest-posts {
         flex-wrap: nowrap;
-        height: 120px;
+        height: 125px;
       }
       .latest-posts li {
         width: 100%;
-        padding-left: 1rem;;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
       }
       .links h3 {
         margin: 0;
-        padding-left: 1rem;
+        padding: 0.5rem 1rem;
         border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        
+
 
       }
-      .latest-posts li:first-child {
-        border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-      }
-      .latest-posts li:nth-child(n+2) {
+      
+      .latest-posts li:nth-child(n) {
         border-bottom: 1px solid #ccc;
+      }
+      .footer-flex {
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+      }
+      .footer-flex >div {
+        width: 100%;
+        padding: 0 0 1rem 1rem;
+      }
+      .footer-flex > div h4 {
+        padding-bottom: 0;
       }
       
 
