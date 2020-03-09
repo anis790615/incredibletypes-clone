@@ -7,13 +7,14 @@
 body {
   background: #ffffff;
   font-family: 'Raleway', sans-serif;
-  /* font-family: "Helvetica Narrow", sans-serif; */
   line-height: 1.8;
 }
+
  a {
    text-decoration: none;
    color: black;
  } 
+
  a:hover {
    text-decoration: underline;
  }
@@ -25,11 +26,9 @@ body {
 
   
 .container {
-  
   max-width: 1200px;
-  
-  
   margin: auto;
+  /* adding the horizontal grid lines (source with adjustments https://stackoverflow.com/questions/46506127/how-to-make-css-background-grid-lines */
   background: linear-gradient(90deg, #f0f0f0 1px, transparent 2px) -1px 0, transparent;
   background-size: calc(100%/6) 100%;
 }
@@ -37,8 +36,8 @@ body {
 /* Navbar */
 nav {
   padding: 2rem 1rem;
-  
 }
+  
 
 .top-nav {
   display: flex;
@@ -46,10 +45,9 @@ nav {
   align-items: center;
 }
 .top-nav > div {
-  /* padding: 0.5rem;
-  align-self: center; */
   width: calc(100%/3);
 }
+
 .top-nav .hamburger-menu {
 text-align: right;
 display: none;
@@ -61,23 +59,21 @@ display: none;
 .top-nav .hamburger-menu i {
   font-size: 2rem;
 }
-
-
-
+/* The main menu made as flex */
 .menu {
   display: flex;
   overflow: hidden;
   margin-top: 3rem;
   margin-bottom: 3rem;
   font-size: 0.8rem
-  
 }
+/* A class for hiding the menu */
 .hide-menu {
   opacity: 0;
   max-height: 0;
   transition: opacity 0.4s ease-out, max-height 0.7s 0.4s ease-out;
-  
 }
+/* A class for showing the menu */
 .show-menu {
   opacity: 1;
   max-height: 600px;
@@ -86,11 +82,12 @@ display: none;
   
 .menu .menu-nav {
   width: calc(100%/6);
-  
 }
+  
 .menu-title {
   margin-bottom: 1.5rem;
 }
+/* Making the tags section of the menu a flex that wraps vertically */
 .tags-nav {
   display: flex;
   flex-flow: column wrap;
@@ -102,50 +99,42 @@ display: none;
   width: 100%;
   padding-left: 1rem;
 }
-
-
-
+/* A class for disabling the non-selected tags */
 .disabled {
   color: #888888;
 }
+/* Non-selected tags do not have hover state */
 a.disabled:hover {
   text-decoration: none;
 }
 
 .showcase {
-  
   padding: 0 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 4rem;
-  
 }
-.showcase .menu-title {
   
+.showcase .menu-title { 
   width: calc(100%/3);
 }
 .showcase .showcase-content {
   width: calc(100% - (100%/3));
 }
 
-
-
-
-
+/* Main section with the photos made as a verical flex that wraps in order to include portrait and landscape photos. I assumed that if the grid was horizontal that the portrait photos will have to be smaller */
 .articles {
-  /* width: 100%; */
   overflow: hidden;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  /* min-height: 1000px; */
   max-height: 2400px;
   align-content: flex-start;
   margin-bottom: 3rem;
 }
-
+/* Starting formatting one card */
 .articles  .card {
 padding: 5px 10px;
 width: calc(100% / 3);
@@ -155,16 +144,15 @@ overflow: hidden;
 
 .card-image .image-wrap {
   position: relative;
-  
   width: 100%;
 }
+/* Making the image grey which will be removed on hover */
 .card-image .image-wrap .photo  {
   width: 100%;
   filter: grayscale(1);
   transition: filter 0s;
-  
 }
-  
+  /*Making an overlay for the text  */
 .card-image .image-wrap::after {
   content: "";
   overflow: hidden;
@@ -176,8 +164,8 @@ overflow: hidden;
   width: 100%;
   height: 5vw;
   transition: opacity 0s;
-  
 }
+  
 .card-title {
   padding: 5px ;
   position: absolute; 
@@ -200,7 +188,7 @@ overflow: hidden;
 .card-title .source-link {
   color: #444;
 }
-
+/* Removing the filter on hover */
 .card:hover .photo {
   filter: none;
   transition: filter 0.2s ease-in;
@@ -216,15 +204,12 @@ overflow: hidden;
   
 }
 
-/* Latest Posts */
+/* Latest Posts section */
 .links {
   margin-left: calc(100%/3);
-  /* padding-left: 15px; */
   width: calc((100%/6)*4);
   margin-bottom: 1rem;
   font-size: 0.7rem;
-  
-
 }
 .links  h3 {
   margin-bottom: 1rem;
@@ -246,15 +231,15 @@ overflow: hidden;
   padding-left: 2rem;
 
 }
+/* Trunkating long text, the inline-block display attribute is required for it to work (source https://stackoverflow.com/questions/43999129/truncate-text-with-css */
 .latest-posts li .latest-links {
-  
   text-overflow: ellipsis;
   display: inline-block;
   width: 95%;
   white-space: nowrap;
   overflow: hidden;
-
 }
+
 
 /* Footer */
 footer {
@@ -301,6 +286,7 @@ footer {
 /* Media queries Tablets */
 
 @media (max-width: 768px) {
+  /* Removing the gradient */
   .container {
     background: transparent;
   }
@@ -360,11 +346,8 @@ footer {
         padding: 0.5rem 1rem;
         border-top: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
-        
-
-
       }
-      
+        
       .latest-posts li:nth-child(n) {
         border-bottom: 1px solid #ccc;
       }
@@ -383,7 +366,8 @@ footer {
       
 
 }
-/* Phones  */
+
+/* Phones  - such layout is not present on the original website*/
 @media (max-width: 600px) {
   nav {
     padding: 1rem;
@@ -406,11 +390,9 @@ footer {
   .card-image .image-wrap::after {
     height: 15vh;
   }
-    
-    
-    
 }
-
+     
+/* Only to make the logo smaller */
 @media (max-width: 360px) {
   .top-nav .logo {
 font-size: 0.8rem;

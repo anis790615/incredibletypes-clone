@@ -14,6 +14,7 @@
     <!-- Header (Mav & Showcase) -->
     <header>
       <nav>
+        <!-- Top navigation includes the logo the show menu link and the hidden hamburger menu button -->
         <div class="top-nav">
           <div class="logo">
             <h1>Incredible Types</h1>
@@ -27,6 +28,7 @@
 
 
         </div>
+        <!-- The menu includes the main links and the tag filtering menu -->
         <div id="menu" class="menu hide-menu">
           <div class="menu-nav main-menu">
             <h3 class="menu-title">Menu</h3>
@@ -87,10 +89,6 @@
             </ul>
           </div>
         </div>
-
-
-
-        
       </nav>
       <div class="showcase">
         <div class="menu-title">
@@ -105,13 +103,6 @@
 
 
       </div>
-        
-        
-        
-        
-
-
-
     </header>
 
 <!-- Main Section -->
@@ -412,9 +403,7 @@
       </article>
       
     </section>
-        
-
-
+    
     <!-- Latest Postst -->
     <section class="links">
       <h3>Latest Posts</h3>
@@ -463,28 +452,23 @@
         </div>
         <div class="follow">
           <h4>Follow</h4>
-          <p>Follow us on <a class="footer-links" href="#">Twitter</a>, <a class="footer-links" href="#">Facebook</a> and <a class="footer-links" href="#">Pinterest</a>or subscribe to our <a class="footer-links" href="#"> RSS Feed</a></p>
+          <p>Follow us on <a class="footer-links" href="#">Twitter</a>, <a class="footer-links" href="#">Facebook</a> and <a class="footer-links" href="#">Pinterest</a> or subscribe to our <a class="footer-links" href="#"> RSS Feed</a></p>
         </div>
       </div>
 
     </footer>
-    
   </div>
+    
 
-
-
-
-
-
-
-  
   <script>
     // show/hide menu
     function toggle() {
+      // Selecting the menu by its class
       const colapMenu = document.querySelector('.menu');
+      // Selectign the link that opens/hides the menu
       const menuLink  = document.querySelector('.toggle-links');
       
-      
+      // Toggling the show hide through replacing classes of the menu and replacing the text content of the link
       if(colapMenu.classList.contains('hide-menu')) {
         colapMenu.classList.replace('hide-menu', 'show-menu');
         menuLink.textContent = menuLink.textContent.replace("Show Menu", "Hide Menu");
@@ -494,12 +478,15 @@
         menuLink.textContent = menuLink.textContent.replace("Hide Menu", "Show Menu");
       }
     }
-    // Filter Menu
+    // Filter Menu (source with adjustments https://www.w3schools.com/howto/howto_js_filter_elements.asp)
     function filterSelection(tag) {
+      // Selecting all tags through the class all which all of the tags have.
       const allTags = document.querySelectorAll(".all");
       
+      // Iterating through all tags and adding the class disabled to them all
         for (let i=0; i<allTags.length; i++ ) {
           allTags[i].classList.add('disabled');
+          // If a class contains the passed tag remove the disabled class
           if (allTags[i].className.indexOf(tag) > -1) {
             allTags[i].classList.remove('disabled'); 
           }
